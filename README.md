@@ -32,6 +32,25 @@ cycles (MAE 24.26) than at <=20 cycles (MAE 6.31). See the complete
 [metrics](artifacts/metrics.json) and [comparison](artifacts/model_comparison.csv).
 
 ![Final endpoint predictions and errors](reports/test_errors.png)
+## Platform preview
+
+### Fleet Overview
+
+![Fleet Overview](screenshots/01_fleet_overview.png)
+
+### Asset-level prediction
+
+![Asset Detail](screenshots/02_asset_detail_operational.png)
+
+### Model performance
+
+![Model Performance](screenshots/04_model_performance.png)
+
+### MLOps monitoring and lifecycle
+
+![MLOps Monitoring](screenshots/06_mlops_monitoring_lifecycle.png)
+
+[Browse all seven dashboard screenshots](screenshots/)
 
 ## Run locally
 
@@ -66,7 +85,7 @@ this resolves compatible ranges instead of the exact uv lock.
 
 The smoke check verifies all three dashboard areas, API/batch parity on all 100 engines,
 SQLite integrity and actual HTTP readiness of both launch commands, then stops its servers.
-Local checks passed; the GitHub Actions workflow is configured but has not run on GitHub.
+Local verification passed, and the GitHub Actions workflow has been successfully verified remotely on GitHub.
 
 ## Dataset access and provenance
 
@@ -274,24 +293,25 @@ The promotion verification command requires a qualified candidate and restores t
 The original `scripts.verify_runtime` checks frozen benchmark parity and should run with
 version 1 active. The original extension passed **48 tests**; the publication cleanup passes **55 tests**, four dashboard areas, MLflow HTTP readiness,
 API telemetry checks and live promotion/rollback. Docker packaging and a CI build step exist,
-and Docker build/start/health/model-info/predict parity were independently verified locally by the project owner. Local CI-equivalent sync, Ruff, pytest and Docker build passed; remote GitHub Actions remains unverified. See
+and Docker build/start/health/model-info/predict parity were independently verified locally by the project owner. Local CI-equivalent sync, Ruff, pytest and Docker build passed. The remote GitHub Actions workflow also passed successfully, including dependency installation, Ruff, pytest and Docker image build. See
 [container commands and architecture](reports/production_architecture.md).
 
 Read [verified extension results](reports/mlops_extension_summary.md),
-[monitoring methodology](reports/model_monitoring.md),
-[retraining and release gates](reports/retraining_and_promotion.md) and
-[MLOps interview notes](reports/mlops_interview_notes.md).
+[monitoring methodology](reports/model_monitoring.md) and
+[retraining and release gates](reports/retraining_and_promotion.md).
 
 ## Repository guide
 
 `src/maintenance/` holds validation, features, models, evaluation, reporting and database
 modules; `api/`, `app/`, `tests/` and `sql/` contain their respective interfaces.
-`artifacts/` contains results, the serialized model including preprocessing/feature recipe,
-and per-run archives. `data/processed/` contains clean observations and model features.
+`artifacts/` contains selected evaluation outputs and example API payloads. Large model binaries,
+runtime databases and full MLflow history are intentionally excluded from the public repository.
+Raw and processed datasets are also git-ignored, while provenance documentation is retained.
 
-Read [project summary](reports/project_summary.md), [technical decisions](reports/technical_decisions.md),
-[limitations](reports/limitations_and_production_notes.md), [interview notes](reports/interview_notes.md),
-[verified CV wording](reports/sample_cv_section.md) and [engineer handoff](HANDOFF.md).
+Read [project summary](reports/project_summary.md),
+[technical decisions](reports/technical_decisions.md),
+[limitations](reports/limitations_and_production_notes.md) and
+[publication audit](reports/publication_readiness.md).
 
 This local prototype has no authentication, calibrated uncertainty or live ingestion.
 Real deployment needs regime validation, censoring-aware labels, sensor contracts,
