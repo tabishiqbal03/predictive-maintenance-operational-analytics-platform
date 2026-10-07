@@ -1,0 +1,8 @@
+{
+  "train_rows": 20631,
+  "test_rows": 13096,
+  "missing_values": 0,
+  "duplicate_keys": 0,
+  "invalid_records": 0,
+  "checks": "26 numeric finite columns, positive integer keys, consecutive cycles from 1; fail-fast"
+}

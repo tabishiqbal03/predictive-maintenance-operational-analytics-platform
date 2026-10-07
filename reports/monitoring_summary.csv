@@ -1,0 +1,5 @@
+scenario,status,data_drift,prediction_drift,performance_degraded,mae,rmse,recall
+normal,valid,False,False,False,4.520693617724863,6.230617140642869,1.0
+sensor_bias,valid,True,False,True,21.9502740981241,31.38005658920592,1.0
+operating_shift,valid,True,False,True,8.479503926166423,12.838754750616372,1.0
+schema_failure,invalid,,,,,,

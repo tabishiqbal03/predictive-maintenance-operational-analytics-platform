@@ -1,0 +1,23 @@
+{
+  "test": {
+    "mae": 19.50497414021164,
+    "rmse": 27.008524920739927,
+    "nasa_score": 9986.277321479574,
+    "n": 100
+  },
+  "operational": {
+    "alert_threshold": 40,
+    "near_failure_count": 16,
+    "near_failure_recall": 0.9375,
+    "missed_critical": 1,
+    "false_alerts": 0,
+    "alerts": 21,
+    "false_alert_fraction": 0.0
+  },
+  "validation_lead_time": {
+    "engines": 25,
+    "engines_alerted": 25,
+    "mean_first_alert_lead_cycles": 35.28,
+    "first_alerts_over_40_cycles": 6
+  }
+}

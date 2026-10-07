@@ -1,0 +1,246 @@
+{
+  "benchmark_hashes_unchanged": true,
+  "active_version": "1",
+  "mlflow_runs": 18,
+  "mlflow_server_http": "passed",
+  "dashboard_pages": 4,
+  "versioned_api_and_invalid_request": "passed",
+  "scenarios": [
+    {
+      "id": "998623c659d1445bb3c2ee1ec598a433",
+      "timestamp": "2026-10-06T01:54:10.443882+00:00",
+      "model_version": "1",
+      "batch_id": "cc3211d478d84e5dba4a039cb76c3ce8",
+      "scenario": "normal",
+      "artificial": true,
+      "source": "train_FD001 only; in-sample replay, not independent generalisation evidence",
+      "status": "valid",
+      "labelled": true,
+      "data_drift": false,
+      "drifted_raw": [],
+      "drifted_features": [],
+      "prediction_drift": false,
+      "prediction_statistics": {
+        "feature": "rul",
+        "ks_distance": 0.030000000000000027,
+        "normalized_wasserstein": 0.013730322873850419,
+        "drifted": false
+      },
+      "reference_status_distribution": {
+        "Healthy": 0.57,
+        "Monitor": 0.25,
+        "Schedule Maintenance": 0.1,
+        "Critical": 0.08
+      },
+      "status_distribution": {
+        "Healthy": 0.58,
+        "Monitor": 0.24,
+        "Schedule Maintenance": 0.1,
+        "Critical": 0.08
+      },
+      "status_total_variation": 0.010000000000000009,
+      "alert_fraction_change": 0.0,
+      "decision_drift": false,
+      "performance_degraded": false,
+      "reference_performance": {
+        "mae": 3.999934647065895,
+        "rmse": 5.564379393587602,
+        "nasa_score": 54.86086625914781,
+        "n": 100,
+        "alert_threshold": 40,
+        "near_failure_count": 10,
+        "near_failure_recall": 1.0,
+        "missed_critical": 0,
+        "false_alerts": 0,
+        "alerts": 18,
+        "false_alert_fraction": 0.0
+      },
+      "performance": {
+        "mae": 4.520693617724863,
+        "rmse": 6.230617140642869,
+        "nasa_score": 64.98230514350243,
+        "n": 100,
+        "alert_threshold": 40,
+        "near_failure_count": 10,
+        "near_failure_recall": 1.0,
+        "missed_critical": 0,
+        "false_alerts": 0,
+        "alerts": 18,
+        "false_alert_fraction": 0.0
+      }
+    },
+    {
+      "id": "87f9befc11fd4e8dbdee90724d7739fc",
+      "timestamp": "2026-10-06T01:54:23.940377+00:00",
+      "model_version": "1",
+      "batch_id": "6026db167c7d4c84acc0e8f2d27ac67d",
+      "scenario": "sensor_bias",
+      "artificial": true,
+      "source": "train_FD001 only; in-sample replay, not independent generalisation evidence",
+      "status": "valid",
+      "labelled": true,
+      "data_drift": true,
+      "drifted_raw": [
+        "sensor_4",
+        "sensor_7",
+        "sensor_11",
+        "sensor_12"
+      ],
+      "drifted_features": [
+        "sensor_4",
+        "sensor_7",
+        "sensor_11",
+        "sensor_12",
+        "sensor_4_mean",
+        "sensor_7_mean",
+        "sensor_11_mean",
+        "sensor_12_mean"
+      ],
+      "prediction_drift": false,
+      "prediction_statistics": {
+        "feature": "rul",
+        "ks_distance": 0.26,
+        "normalized_wasserstein": 0.45573811552693777,
+        "drifted": false
+      },
+      "reference_status_distribution": {
+        "Healthy": 0.57,
+        "Monitor": 0.25,
+        "Schedule Maintenance": 0.1,
+        "Critical": 0.08
+      },
+      "status_distribution": {
+        "Monitor": 0.41,
+        "Healthy": 0.34,
+        "Critical": 0.16,
+        "Schedule Maintenance": 0.09
+      },
+      "status_total_variation": 0.23999999999999996,
+      "alert_fraction_change": 0.07,
+      "decision_drift": true,
+      "performance_degraded": true,
+      "reference_performance": {
+        "mae": 3.999934647065895,
+        "rmse": 5.5643793935876005,
+        "nasa_score": 54.860866259147805,
+        "n": 100,
+        "alert_threshold": 40,
+        "near_failure_count": 10,
+        "near_failure_recall": 1.0,
+        "missed_critical": 0,
+        "false_alerts": 0,
+        "alerts": 18,
+        "false_alert_fraction": 0.0
+      },
+      "performance": {
+        "mae": 21.9502740981241,
+        "rmse": 31.38005658920592,
+        "nasa_score": 29429.08062705812,
+        "n": 100,
+        "alert_threshold": 40,
+        "near_failure_count": 10,
+        "near_failure_recall": 1.0,
+        "missed_critical": 0,
+        "false_alerts": 7,
+        "alerts": 25,
+        "false_alert_fraction": 0.28
+      }
+    },
+    {
+      "id": "4abfd26bbbfb49cbb73465ef4cd41c93",
+      "timestamp": "2026-10-06T01:54:36.542576+00:00",
+      "model_version": "1",
+      "batch_id": "3b3e3ea273fe49aaa1591819da71e0b9",
+      "scenario": "operating_shift",
+      "artificial": true,
+      "source": "train_FD001 only; in-sample replay, not independent generalisation evidence",
+      "status": "valid",
+      "labelled": true,
+      "data_drift": true,
+      "drifted_raw": [
+        "setting_1",
+        "setting_2"
+      ],
+      "drifted_features": [
+        "setting_1",
+        "setting_2",
+        "setting_1_mean",
+        "setting_2_mean"
+      ],
+      "prediction_drift": false,
+      "prediction_statistics": {
+        "feature": "rul",
+        "ks_distance": 0.07000000000000006,
+        "normalized_wasserstein": 0.08629721036206163,
+        "drifted": false
+      },
+      "reference_status_distribution": {
+        "Healthy": 0.57,
+        "Monitor": 0.25,
+        "Schedule Maintenance": 0.1,
+        "Critical": 0.08
+      },
+      "status_distribution": {
+        "Healthy": 0.61,
+        "Monitor": 0.21,
+        "Schedule Maintenance": 0.1,
+        "Critical": 0.08
+      },
+      "status_total_variation": 0.04000000000000002,
+      "alert_fraction_change": 0.0,
+      "decision_drift": false,
+      "performance_degraded": true,
+      "reference_performance": {
+        "mae": 3.999934647065894,
+        "rmse": 5.5643793935876,
+        "nasa_score": 54.86086625914779,
+        "n": 100,
+        "alert_threshold": 40,
+        "near_failure_count": 10,
+        "near_failure_recall": 1.0,
+        "missed_critical": 0,
+        "false_alerts": 0,
+        "alerts": 18,
+        "false_alert_fraction": 0.0
+      },
+      "performance": {
+        "mae": 8.479503926166423,
+        "rmse": 12.838754750616372,
+        "nasa_score": 427.11605337243617,
+        "n": 100,
+        "alert_threshold": 40,
+        "near_failure_count": 10,
+        "near_failure_recall": 1.0,
+        "missed_critical": 0,
+        "false_alerts": 0,
+        "alerts": 18,
+        "false_alert_fraction": 0.0
+      }
+    },
+    {
+      "id": "8eebc645ec434450b4b4fd1f5151e94a",
+      "timestamp": "2026-10-06T01:54:48.896575+00:00",
+      "model_version": "1",
+      "batch_id": "9ca791b3fd1e479dab7c6810363bb327",
+      "scenario": "schema_failure",
+      "artificial": true,
+      "source": "train_FD001 only; in-sample replay, not independent generalisation evidence",
+      "status": "invalid",
+      "labelled": true,
+      "schema_error": "Expected nonempty 26-column C-MAPSS schema",
+      "data_drift": null,
+      "prediction_drift": null,
+      "performance_degraded": null
+    }
+  ],
+  "service_summary": [
+    {
+      "model_version": "1",
+      "requests": 302,
+      "errors": 1,
+      "mean_latency_ms": 86.52913576244093,
+      "max_latency_ms": 340.27660003630444
+    }
+  ],
+  "docker": "not installed; build not verified"
+}

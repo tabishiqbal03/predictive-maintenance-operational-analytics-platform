@@ -1,0 +1,6 @@
+alert_threshold,near_failure_count,near_failure_recall,missed_critical,false_alerts,alerts,false_alert_fraction
+20,16,0.8125,3,0,13,0.0
+30,16,0.9375,1,0,19,0.0
+40,16,0.9375,1,0,21,0.0
+50,16,0.9375,1,4,28,0.14285714285714285
+60,16,0.9375,1,9,34,0.2647058823529412

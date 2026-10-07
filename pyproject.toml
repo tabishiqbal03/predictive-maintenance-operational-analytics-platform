@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "maintenance-analytics"
+version = "1.0.0"
+description = "Leakage-safe C-MAPSS remaining useful life decision support"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26,<3",
+    "pandas>=2.2,<3",
+    "scikit-learn>=1.5,<2",
+    "lightgbm>=4.5,<5",
+    "matplotlib>=3.9,<4",
+    "joblib>=1.4,<2",
+    "fastapi>=0.115,<1",
+    "uvicorn>=0.30,<1",
+    "streamlit>=1.40,<2",
+    "pydantic>=2.9,<3",
+    "mlflow>=3.1,<4",
+    "scipy>=1.14,<2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "httpx>=0.27,<1", "ruff>=0.9,<1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "src"]
+
+[tool.ruff]
+line-length = 110
+extend-exclude = [".python", ".uv-cache", ".venv"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+

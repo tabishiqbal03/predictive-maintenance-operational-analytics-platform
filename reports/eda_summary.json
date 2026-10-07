@@ -1,0 +1,31 @@
+{
+  "engines": 100,
+  "rows": 20631,
+  "lifetime_min": 128,
+  "lifetime_median": 199.0,
+  "lifetime_max": 362,
+  "retained_channels": [
+    "setting_1",
+    "setting_2",
+    "sensor_2",
+    "sensor_3",
+    "sensor_4",
+    "sensor_7",
+    "sensor_8",
+    "sensor_9",
+    "sensor_11",
+    "sensor_12",
+    "sensor_13",
+    "sensor_14",
+    "sensor_15",
+    "sensor_17",
+    "sensor_20",
+    "sensor_21"
+  ],
+  "strongest_absolute_correlations": {
+    "sensor_11": -0.696228101455419,
+    "sensor_4": -0.6789482333860456,
+    "sensor_12": 0.6719831036132903,
+    "sensor_7": 0.6572226620548836
+  }
+}

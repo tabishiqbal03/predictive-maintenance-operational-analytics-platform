@@ -1,0 +1,7 @@
+{
+  "api_batch_parity_engines": 100,
+  "dashboard_pages": 3,
+  "sqlite_integrity": "ok",
+  "uvicorn_http_health": "passed",
+  "streamlit_http_health": "passed"
+}
