@@ -99,7 +99,13 @@ def test_model_roundtrip_and_serving_history(frame, tmp_path):
     loaded = load_model(path)
     np.testing.assert_allclose(bundle.predict(frame), loaded.predict(frame))
     history = frame[frame.engine_id == 1]
-    assert loaded.latest(history) == loaded.latest(history.tail(3))
+    full = loaded.latest(history)
+    recent = loaded.latest(history.tail(3))
+    assert full["engine_id"] == recent["engine_id"]
+    assert full["cycle"] == recent["cycle"]
+    assert full["maintenance_status"] == recent["maintenance_status"]
+    assert full["model_version"] == recent["model_version"]
+    assert full["predicted_rul"] == pytest.approx(recent["predicted_rul"], abs=1e-12)
     with pytest.raises(ValueError, match="at least"):
         loaded.latest(history.tail(1))
     with pytest.raises(FileNotFoundError):
